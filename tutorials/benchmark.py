@@ -109,6 +109,7 @@ def sdcd_ev(n, d, n_edges, n_per_intervention):
     model.train(X_dataset, finetune=True)
     adj_matrix = model.get_adjacency_matrix(threshold=True)
     acc = count_accuracy(true_causal_model.adjacency, adj_matrix)
+    print(f'accuracy of SDCD: {acc}')
     return acc
 
 
